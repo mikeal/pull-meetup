@@ -1,6 +1,6 @@
 {
   "name": "pull-meetup",
-  "version": "0.1.0",
+  "version": "0.0.0-dev",
   "description": "Search meetup.com and output a csv file.",
   "main": "index.js",
   "bin": {
@@ -17,5 +17,14 @@
     "csv-write-stream": "^2.0.0",
     "html-to-text": "^4.0.0",
     "yargs": "^13.2.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikeal/pull-meetup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mikeal/pull-meetup/issues"
+  },
+  "homepage": "https://github.com/mikeal/pull-meetup#readme"
 }
