@@ -1,8 +1,11 @@
 {
   "name": "pull-meetup",
   "version": "0.1.0",
-  "description": "",
+  "description": "Search meetup.com and output a csv file.",
   "main": "index.js",
+  "bin": {
+    "pull-meetup": "./cli.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,6 +15,7 @@
   "dependencies": {
     "bent": "^1.1.0",
     "csv-write-stream": "^2.0.0",
-    "html-to-text": "^4.0.0"
+    "html-to-text": "^4.0.0",
+    "yargs": "^13.2.2"
   }
 }

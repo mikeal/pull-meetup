@@ -68,10 +68,10 @@ const _req = async (query, results) => {
   return results
 }
 
-const bySearch = async (term) => {
+const bySearch = async (term, token = process.env.MEETUP_TOKEN) => {
   let query = {
     only: 'city,country,lat,link,lon,name,next_event.time,last_event.time',
-    key: process.env.MEETUP_TOKEN,
+    key: token,
     text: term,
     page: 200,
     offset: 0,
@@ -87,9 +87,9 @@ const bySearch = async (term) => {
       r.next = `=DATE(${year};${month};${day})`
     }
   })
-
-  console.log(await toCSV(results))
+  return toCSV(results)
 }
-bySearch('IPFS')
+module.exports = bySearch
+// bySearch('IPFS')
 // bySearch('dapps')
 // bySearch('distributed web')
